@@ -1,7 +1,7 @@
 <template>
   <div class="interview">
-     <Title title="面试题" text="这些面试题够简单和熟悉了吧"/>
-  </div> 
+    <Title title="面试题" text="这些面试题够简单和熟悉了吧" />
+  </div>
 </template>
 
 <script>
@@ -14,17 +14,11 @@ export default {
   data() {
     return {
       items: []
-    }
+    };
   },
-  mounted () {
-   
-  },
-  computed: {
-    
-  },
-  methods: {
-   
-  }
+  mounted() {},
+  computed: {},
+  methods: {}
 };
 </script>
 
