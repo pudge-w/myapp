@@ -1,14 +1,15 @@
 <template>
   <div>
-    <Title />
-    <ul>
-      <li v-for="(item, index) in items" :key="index">{{ item.title }}</li>
-    </ul>
+    <Title title="HTML、CSS" text="html和css够简单和熟悉不过了吧"/>
+    <div class = "nav_main">
+     <ListItem v-for="(item, index) in items" :key="index" :item="item"/>
+    </div>
   </div>
 </template>
 
 <script>
 import Title from "../components/css/Title";
+import ListItem from '../components/css/ListItem'
 import { mapGetters } from "vuex";
 
 export default {
@@ -17,7 +18,7 @@ export default {
   },
 
   components: {
-    Title
+    Title,ListItem
   },
 
   computed: {
@@ -30,18 +31,14 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-ul {
-  max-width: 1020px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  li {
-    width: 30%;
-    height: 300px;
-    background: #fff;
-    margin-top: 30px;
-    color: #000;
-  }
+@import "../assets/css/var.less";
+.nav_main{
+   max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
 }
+
 </style>

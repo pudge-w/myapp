@@ -4,9 +4,10 @@
     <section class="part2"></section>
     <section class="part3"></section>
     <main>
-      <h2>HTML、CSS</h2>
+      <h2>{{title}}</h2>
       <p>
-        html和css够简单和熟悉不过了吧,
+        <!-- html和css够简单和熟悉不过了吧, -->
+        {{text}}
         <br />可是你真的会了吗？
       </p>
       <div class="searchBox">
@@ -28,6 +29,10 @@
 
 <script>
 export default {
+  props: {
+    title: String,
+    text: String,
+  },
   data() {
     return {
       value: ""
